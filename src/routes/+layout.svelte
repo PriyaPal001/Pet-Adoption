@@ -1,25 +1,33 @@
+<script>
+  import "../app.css";
+  //   import Nav from "../lib/Nav.svelte";
+
+  let navs = [
+    { name: "Home", link: "/" },
+    { name: "Cats", link: "/cats" },
+    { name: "Dogs", link: "/dogs" },
+    { name: "Upload", link: "/upload" },
+  ];
+</script>
+
 <svelte:head>
-    <title>Infinit Bond</title>
+  <title>Infinit Bond</title>
 </svelte:head>
 
-<script>
-    import "../app.css";
-//   import Nav from "../lib/Nav.svelte";
-
-    let navs=[
-        {name:"Home",link:"/"},
-        {name:"Cats",link:"/cats"},
-        {name:"Dogs",link:"/dogs"},
-        {name:"Upload",link:"/upload"},
-    ]
-  </script>
-
-
 <div
-  class="navbar text-white fixed backdrop-blur-sm w-[80%] rounded-3xl text-black top-5 z-10 border-b-2 border-purple-600 hidden md:flex "
+  class="navbar  sticky bg-gray-900 text-white w-[80%] mx-auto  backdrop-blur-sm rounded-3xl  top-10 z-10 border-b-2 border-purple-600 hidden md:flex "
 >
   <div class="flex-1 mx-2 ">
-    <a class="btn btn-ghost normal-case text-xl hover:border-purple-600 border-2" href="/"> <img src="https://cdn-icons-png.flaticon.com/512/7148/7148652.png" class="w-10 " alt="">Bond</a>
+    <a
+      class="btn btn-ghost normal-case text-xl hover:border-purple-600 border-2"
+      href="/"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/7148/7148652.png"
+        class="w-10 "
+        alt=""
+      />Bond</a
+    >
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
@@ -27,7 +35,8 @@
         <li>
           <a
             href={nav.link}
-            class="btn btn-ghost mx-2 hover:border-purple-600 border-2">{nav.name}</a
+            class="btn btn-ghost mx-2 hover:border-purple-600 border-2"
+            >{nav.name}</a
           >
         </li>
       {/each}
@@ -42,27 +51,26 @@
   >
     <span class="flex flex-col items-center gap-1 text-indigo-500">
       <a
-      href="/"
-      class="flex flex-col items-center gap-1  transition duration-100 "
-    >
-      <svg
-        class="h-6 w-6"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
+        href="/"
+        class="flex flex-col items-center gap-1  transition duration-100 "
       >
-        <path
-          d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z"
-        />
-        <path
-          d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z"
-        />
-      </svg>
+        <svg
+          class="h-6 w-6"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z"
+          />
+          <path
+            d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z"
+          />
+        </svg>
 
-      <span>Home</span>
-    </a>
+        <span>Home</span>
+      </a>
     </span>
-
 
     <a
       href="/blog"
@@ -113,46 +121,99 @@
 <slot />
 
 <footer class="text-gray-600 body-font">
-    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+  <div
+    class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+  >
+    <a
+      class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        class="w-10 h-10 text-white p-2 bg-red-500 rounded-full"
+        viewBox="0 0 24 24"
+      >
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+      </svg>
+      <span class="ml-3 text-xl">Tailblocks</span>
+    </a>
+    <p
+      class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+    >
+      © 2020 Tailblocks —
+      <a
+        href="https://twitter.com/knyttneve"
+        class="text-gray-600 ml-1"
+        rel="noopener noreferrer"
+        target="_blank">@knyttneve</a
+      >
+    </p>
+    <span
+      class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+    >
+      <a class="text-gray-500">
+        <svg
+          fill="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="w-5 h-5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+          />
         </svg>
-        <span class="ml-3 text-xl">Tailblocks</span>
       </a>
-      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Tailblocks —
-        <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@knyttneve</a>
-      </p>
-      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-        <a class="text-gray-500">
-          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-500">
-          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-500">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-500">
-          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-            <circle cx="4" cy="4" r="2" stroke="none"></circle>
-          </svg>
-        </a>
-      </span>
-    </div>
-  </footer>
-
-
-      
-
-  
-
-  
+      <a class="ml-3 text-gray-500">
+        <svg
+          fill="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="w-5 h-5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+          />
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="w-5 h-5"
+          viewBox="0 0 24 24"
+        >
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg
+          fill="currentColor"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="0"
+          class="w-5 h-5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="none"
+            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+          />
+          <circle cx="4" cy="4" r="2" stroke="none" />
+        </svg>
+      </a>
+    </span>
+  </div>
+</footer>
