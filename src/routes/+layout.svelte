@@ -16,7 +16,7 @@
 
 
 <div
-  class="navbar text-white bg-gray-900 sticky top-0 z-10 border-b-2 border-purple-600 hidden md:flex "
+  class="navbar text-white fixed backdrop-blur-sm w-[80%] rounded-3xl text-black top-5 z-10 border-b-2 border-purple-600 hidden md:flex "
 >
   <div class="flex-1 mx-2 ">
     <a class="btn btn-ghost normal-case text-xl hover:border-purple-600 border-2" href="/"> <img src="https://cdn-icons-png.flaticon.com/512/7148/7148652.png" class="w-10 " alt="">Bond</a>
