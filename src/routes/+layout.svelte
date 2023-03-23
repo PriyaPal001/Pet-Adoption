@@ -15,7 +15,8 @@
 </svelte:head>
 
 <div
-  class="navbar  sticky bg-gray-900 text-white w-[80%] mx-auto  backdrop-blur-sm rounded-3xl  top-10 z-10 border-b-2 border-purple-600 hidden md:flex "
+  class="navbar  sticky bg-gray-900 text-white w-[60%] mx-auto  backdrop-blur-sm rounded-full  top-3 z-10 border-b-2 border-purple-600 hidden md:flex "
+  id="nvh"
 >
   <div class="flex-1 mx-2 ">
     <a
@@ -35,7 +36,7 @@
         <li>
           <a
             href={nav.link}
-            class="btn btn-ghost mx-2 hover:border-purple-600 border-2"
+            class="btn btn-ghost mx-2 hover:text-purple-600  border-2 hover:bg-transparent rounded-full"
             >{nav.name}</a
           >
         </li>
@@ -217,3 +218,10 @@
     </span>
   </div>
 </footer>
+
+<style>
+  #nvh {
+    height: 20px;
+    min-height: 50px;
+  }
+</style>
